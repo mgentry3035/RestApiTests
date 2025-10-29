@@ -40,9 +40,9 @@ RestApiTests/
 
 ---
 
-## ⚡ Setup Instructions
+##  Setup Instructions
 
-### 1 Clone or Download
+### 1) Clone or Download
 If using Git:
 ```bash
 git clone https://github.com/<your-username>/RestApiTests.git
@@ -53,7 +53,7 @@ Or, download the folder directly from your GitHub repository.
 
 ---
 
-### 2 Restore Dependencies
+### 2) Restore Dependencies
 Run this command to install required NuGet packages:
 ```bash
 dotnet restore
@@ -61,7 +61,7 @@ dotnet restore
 
 ---
 
-### 3 Build the Project
+### 3) Build the Project
 ```bash
 dotnet build
 ```
@@ -73,7 +73,7 @@ Build succeeded.
 
 ---
 
-### 4 Run the Tests
+### 4) Run the Tests
 Execute all NUnit tests:
 ```bash
 dotnet test
