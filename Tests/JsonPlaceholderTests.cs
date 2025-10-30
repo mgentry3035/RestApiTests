@@ -94,10 +94,28 @@ namespace RestApiTests.Tests
             var request = new RestRequest("/invalidEndpoint", Method.Get);
             var response = client.Execute(request);
 
+            // Log output to the console
+            Console.WriteLine("🧪 Negative Test: Invalid endpoint request executed.");
+            Console.WriteLine($"➡️ Requested URL: {client.Options.BaseUrl}/invalidendpoint");
+            Console.WriteLine($"⬅️ Response Status Code: {(int)response.StatusCode} {response.StatusCode}");
+            Console.WriteLine($"📦 Response Content: {response.Content}");
+
+            // Assert
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                Console.WriteLine("✅ Expected 404 Not Found received — negative test passed.");
+            }
+            else
+            {
+                Console.WriteLine($"❌ Unexpected status code: {(int)response.StatusCode}");
+            }
+
             response.StatusCode.Should().Be(HttpStatusCode.NotFound);
         }
     }
 }
+
+
 
 
 
